@@ -26,7 +26,7 @@ function parseEventDateTime(): { start: string; end: string } {
 }
 
 export const buildGoogleCalendarUrl = (opts: CalendarOpts = {}): string => {
-  const { title, details, location } = opts;
+  const { title, location } = opts;
   const base = "https://www.google.com/calendar/render?action=TEMPLATE";
 
   const { start, end } = parseEventDateTime();

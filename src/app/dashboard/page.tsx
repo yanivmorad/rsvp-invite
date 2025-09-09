@@ -60,7 +60,7 @@ export default async function Dashboard() {
               <div className="hidden md:block h-12 w-px bg-gray-200"></div>
               <div>
                 <div className="text-3xl font-bold text-indigo-700">{totalGuests}</div>
-                <div className="text-gray-600">סה"כ אורחים</div>
+                <div className="text-gray-600">סה/כ אורחים </div>
               </div>
             </div>
           </div>
