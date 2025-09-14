@@ -12,18 +12,30 @@ export const INVITATION_CONFIG = {
   venueDetails: "קבלת פנים - 18:30", // פרטים נוספים + שעת התחלה (קריטי ליומן אם לא נגדיר שעה אחרת)
   
   venueCoords: { // נקודות ציון ברירת מחדל (קריטי ל-Waze)
-    lat: 31.807194, // קו רוחב
-    lng: 34.642652, // קו אורך
+    lat: null, // קו רוחב
+    lng: null, // קו אורך
   },
 
-  colors: { // צבעי עיצוב להזמנה
-    primary: '#2f4050', 
+  colors: {
+    // צבע ראשי - כותרות, טקסטים חשובים ואייקונים
+    primary: '#2f4050',
+    
+    // צבע משני - טקסטים משניים ופרטים נוספים
     secondary: '#e8c8af',
+    
+    // צבע דגש - אלמנטים דקורטיביים (קונפטי)
     accent: '#ffd700',
+    
+    // גרדיאנט רקע - רקע כללי של הדף
     backgroundGradient: { from: '#cfe8f7', to: '#e5d0bf' },
+    
+    // גרדיאנט כפתורים - כפתורים ראשיים (הוסף ליומן, אשר הגעה)
     buttonGradient: { from: '#2f4050', to: '#1e2a36' },
+    
+    // גרדיאנט כפתורים בהובר - מצב hover של כפתורים
     buttonHoverGradient: { from: '#3b4d63', to: '#141c24' }
   },
+
 
   images: {
     background: '/baby_photo.avif' // תמונת רקע להזמנה

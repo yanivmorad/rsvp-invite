@@ -1,5 +1,5 @@
 // src/app/invite/utils.ts
-import { INVITATION_CONFIG } from "./config";
+import { INVITATION_CONFIG } from "../config";
 
 type CalendarOpts = { title?: string; details?: string; location?: string };
 
