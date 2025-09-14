@@ -38,7 +38,7 @@ export async function POST(req: NextRequest) {
     }
 
     return NextResponse.json({ ok: true, inserted: data ?? [] });
-  } catch (err: any) {
+  } catch (err: unknown) {
     console.error('POST /api/rsvp error:', err);
     return sendError('Bad request', 400);
   }
@@ -61,7 +61,7 @@ export async function GET(req: NextRequest) {
     }
 
     return NextResponse.json(data ?? []);
-  } catch (err: any) {
+  } catch (err: unknown) {
     console.error('GET /api/rsvp error:', err);
     return sendError('Server error', 500);
   }
@@ -97,11 +97,12 @@ export async function DELETE(req: NextRequest) {
     }
 
     return NextResponse.json({ ok: true, deleted: data.length, deletedRows: data });
-  } catch (err: any) {
+  } catch (err: unknown) {
     console.error('DELETE /api/rsvp error:', err);
     return sendError('Bad request', 400);
   }
 }
+
 export async function PUT(req: NextRequest) {
   try {
     if (requireAuth && !isAuthorized(req)) {
@@ -140,7 +141,7 @@ export async function PUT(req: NextRequest) {
     }
 
     return NextResponse.json({ ok: true, updated: data });
-  } catch (err: any) {
+  } catch (err: unknown) {
     console.error("PUT /api/rsvp error:", err);
     return sendError("Bad request", 400);
   }
